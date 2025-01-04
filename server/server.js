@@ -43,7 +43,7 @@ app.use('/contacts', contactRouter);
 // Start the server
 
 app.get('/',(req,res)=>{
-  res.send("this is fpr server");
+  res.send("server is running");
 })
 const PORT = process.env.SERVER_PORT;
 // const PORT = 8000;
