@@ -1,0 +1,200 @@
+/* General Container */
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Styles */
+.teammate-form {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 450px;
+  margin: 0 auto 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.teammate-form h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.teammate-form input[type="text"],
+.teammate-form input[type="file"] {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.teammate-form input[type="text"]:focus,
+.teammate-form input[type="file"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.teammate-form input[type="file"] {
+  padding: 6px;
+}
+
+.teammate-form button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.teammate-form button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.teammate-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.teammate-form .error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Teammate List and Cards */
+.teammate-list {
+  display: flex;
+  overflow-x: auto; /* Horizontal scrolling */
+  gap: 20px;
+  padding-bottom: 20px;
+  justify-content: flex-start;
+}
+
+.teammate-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  width: 250px; /* Adjust width of cards */
+  /* height: 350px; Set a fixed height for cards */
+  height: 450px; /* Set a fixed height for cards */
+}
+
+.teammate-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.teammate-item h3 {
+  margin: 15px;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.teammate-item p {
+  margin: 0 15px 15px;
+  color: #666;
+  text-align: center;
+}
+
+.teammate-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.teammate-actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.teammate-actions button:first-child {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.teammate-actions button:first-child:hover {
+  background-color: #e0a800;
+}
+
+.teammate-actions button:last-child {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.teammate-actions button:last-child:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .teammate-list {
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+  }
+
+  .teammate-item {
+    width: 250px; /* Adjust card width */
+    height: 400px; /* Adjust card height */
+  }
+  .teammate-actions button {
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .teammate-item {
+    width: 180px; /* Adjust card width for smaller devices */
+    height: 380px; /* Adjust card height for smaller devices */
+  }
+
+  .teammate-item img {
+    height: 150px; /* Adjust image height for small devices */
+  }
+  .teammate-actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 3px;
+  }
+}

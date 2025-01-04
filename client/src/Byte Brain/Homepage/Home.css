@@ -1,0 +1,12 @@
+.event-container {
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.event-list {
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

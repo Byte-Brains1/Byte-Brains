@@ -1,0 +1,118 @@
+/* General styles */
+.images {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: rgb(238, 238, 238);
+  /* background:linear-gradient(to right ,#004aad,yellow,#ff914d) ; */
+}
+
+#image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-height: 500px;  /* Maximum height */
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  /* max-width: 1100px;   */
+  max-width: 900px;  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensures the image fills the container while maintaining aspect ratio */
+  transition: transform 0.3s ease-in-out, opacity 1s ease-in-out;  /* Added scale transition */
+}
+
+.image:hover {
+  transform: scale(1.05);  /* Slight zoom on hover */
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button {
+  padding: 12px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Large screen - desktop */
+@media (min-width: 1024px) {
+  #image-container {
+      height: 500px;
+      max-width: 1200px;  /* Restrict the maximum width for large screens */
+  }
+
+  .button {
+      font-size: 18px;
+  }
+}
+
+/* Medium screen - tablets */
+@media (max-width: 1023px) and (min-width: 768px) {
+  #image-container {
+      height: 400px;
+  }
+
+  .button {
+      font-size: 16px;
+  }
+}
+
+/* Small screen - mobile */
+@media (max-width: 767px) {
+  .images {
+      padding: 10px;
+  }
+
+  #image-container {
+      height: 300px;
+  }
+
+  .button {
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+
+  /* Keep buttons in a row on small screens */
+  .controls {
+      flex-direction: row;  /* Ensure buttons are in a row */
+      gap: 10px;
+  }
+}
+
+/* Extra Small screen - very small mobile */
+@media (max-width: 400px) {
+  .button {
+      font-size: 12px;
+      padding: 8px 15px;
+  }
+
+  .controls {
+      flex-direction: row;  /* Keep buttons in a row */
+      gap: 8px;
+  }
+}

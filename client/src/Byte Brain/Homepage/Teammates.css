@@ -1,0 +1,60 @@
+/* Base styles for the teammate list */
+.teammate-list {
+    display: flex;
+    flex-wrap: nowrap;  /* Prevent wrapping of cards */
+    overflow-x: auto;   /* Enable horizontal scrolling */
+    gap: 16px;          /* Spacing between teammate cards */
+    padding: 16px;      /* Padding around the list */
+    scroll-snap-type: x mandatory;  /* Enable snapping */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+  
+  .teammate-list::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .teammate-list::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+  }
+  
+  .teammate-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Card styling for each teammate */
+  .teammate-card {
+    min-width: 250px;  /* Minimum width of each card */
+    flex-shrink: 0;    /* Prevent cards from shrinking */
+    padding: 16px;
+    background-color:white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .teammate-card:hover {
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+  }
+  
+  /* Responsive adjustments for smaller devices */
+  @media (max-width: 768px) {
+    .teammate-list {
+      gap: 8px;   /* Smaller gap on smaller screens */
+    }
+  
+    .teammate-card {
+      min-width: 200px;  /* Slightly smaller cards on mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .teammate-list {
+      gap: 4px;  /* Even smaller gap on very small screens */
+    }
+  
+    .teammate-card {
+      min-width: 150px;  /* Smaller cards for small devices */
+    }
+  }
+  

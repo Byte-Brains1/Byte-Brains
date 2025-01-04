@@ -1,0 +1,129 @@
+/* Global styles for body and container */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .login-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+  
+  .login-form__title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+  }
+  
+  .login-form__input-container {
+    margin-bottom: 20px;
+  }
+  
+  .login-form__label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .login-form__input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .login-form__input:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
+  .login-form__button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+  }
+  
+  .login-form__button:hover {
+    background-color: #45a049;
+  }
+  
+  .login-form__error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .login-form {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login-form {
+      padding: 30px;
+    }
+  
+    .login-form__title {
+      font-size: 1.5rem;
+    }
+  
+    .login-form__input {
+      padding: 12px;
+    }
+  
+    .login-form__button {
+      padding: 12px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-form {
+      padding: 20px;
+    }
+  
+    .login-form__title {
+      font-size: 1.2rem;
+    }
+  
+    .login-form__input {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  
+    .login-form__button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,0 +1,15 @@
+.breaking-news {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .news-marquee {
+    margin-top: 20px;
+  }
+  
+  marquee {
+    color: red; /* Change to any color you'd like */
+    font-size: 24px;
+    font-weight: bold;
+  }
+  

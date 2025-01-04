@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Event Form Styles */
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f9f9fc;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.event-form input,
+.event-form textarea,
+.event-form button {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.event-form input:focus,
+.event-form textarea:focus {
+  border-color: #007bff;
+}
+
+.event-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.event-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Sub-event Styles */
+.subevent-container {
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.subevent-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.add-subevent-button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-subevent-button:hover {
+  background-color: #218838;
+}
+
+.subevent-item button {
+  align-self: flex-end;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subevent-item button:hover {
+  background-color: #c82333;
+}
+
+/* Event List Styles */
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.event-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.event-item p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+.event-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.event-actions button {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.event-actions button:first-child {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.event-actions button:first-child:hover {
+  background-color: #e0a800;
+}
+
+.event-actions button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.event-actions button:last-child:hover {
+  background-color: #c82333;
+}
+
+/* Sub-event Display */
+.subevent-item {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.subevent-item p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.subevent-item button {
+  margin-top: 5px;
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+.subevent-item button:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .event-item {
+    padding: 10px;
+  }
+
+  .event-form input,
+  .event-form textarea,
+  .event-form button {
+    font-size: 0.9rem;
+  }
+
+  .event-actions button {
+    font-size: 0.8rem;
+  }
+}
