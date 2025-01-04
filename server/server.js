@@ -41,8 +41,13 @@ app.use('/news', breakingNewsRouter);
 app.use('/contacts', contactRouter);
 
 // Start the server
+
+app.get('/',(req,res)=>{
+  res.send("this is fpr server");
+})
 const PORT = process.env.SERVER_PORT;
 // const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  // res.send("This server");
 });
