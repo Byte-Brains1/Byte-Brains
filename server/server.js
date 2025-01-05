@@ -10,7 +10,7 @@ const contactRouter = require('./contact'); // Import the Breaking News router
 
 require('dotenv').config();
 // const PORT = process.env.PORT;
-const MONGODB_URL = process.env.MONGODB_URL;
+const MONGODB_URL = process.env.MONGODB_URL || 8000;
 
 
 
