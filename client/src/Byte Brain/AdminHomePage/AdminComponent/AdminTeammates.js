@@ -55,13 +55,13 @@ const AdminTeammates = () => {
       if (editTeammateId) {
         if (window.confirm('Are you sure you want to update this teammate?')) {
           await axios.put(
-            `http://localhost:8000/teammates/update/${editTeammateId}`,
+            `${API_URL}/teammates/update/${editTeammateId}`,
             form
           );
           setEditTeammateId(null);
         }
       } else {
-        await axios.post('http://localhost:8000/teammates/upload', form);
+        await axios.post(`${API_URL}/teammates/upload`, form);
       }
       setFormData({ name: '', position: '', section: '', image: null });
       fetchTeammates();
@@ -88,7 +88,7 @@ const AdminTeammates = () => {
   const handleDelete = async (id) => {
     try {
       if (window.confirm('Are you sure you want to delete this teammate?')) {
-        await axios.delete(`http://localhost:8000/teammates/delete/${id}`);
+        await axios.delete(`${API_URL}/teammates/delete/${id}`);
         fetchTeammates();
       }
     } catch (err) {
