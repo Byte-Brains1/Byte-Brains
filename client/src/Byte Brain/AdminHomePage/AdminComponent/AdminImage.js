@@ -33,7 +33,7 @@ const AdminImage = () => {
     formData.append('title', title);
 
     try {
-      await axios.post('http://localhost:8000/images/upload', formData, {
+      await axios.post(`${API_URL}/images/upload`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setNewImage(null);
@@ -60,7 +60,7 @@ const AdminImage = () => {
     formData.append('title', title);
 
     try {
-      await axios.put(`http://localhost:8000/images/update/${selectedImage}`, formData, {
+      await axios.put(`${API_URL}/images/update/${selectedImage}`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setSelectedImage(null);
@@ -77,7 +77,7 @@ const AdminImage = () => {
 
     if (isConfirmed) {
       try {
-        await axios.delete(`http://localhost:8000/images/delete/${id}`);
+        await axios.delete(`${API_URL}/images/delete/${id}`);
         // Remove the deleted image from the list without fetching all again
         setImages(images.filter((image) => image._id !== id));
         alert('Image deleted successfully!');
