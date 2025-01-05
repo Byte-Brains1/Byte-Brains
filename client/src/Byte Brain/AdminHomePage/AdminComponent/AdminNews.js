@@ -23,7 +23,7 @@ function AdminNews() {
   // Upload new breaking news
   const handleUpload = async () => {
     try {
-      const response = await axios.post('http://localhost:8000/news/upload', { text });
+      const response = await axios.post(`${API_URL}/news/upload`, { text });
       setMessage(response.data.message);
       setText('');
       fetchBreakingNews(); // Fetch updated news after uploading
@@ -35,7 +35,7 @@ function AdminNews() {
   // Delete breaking news
   const handleDelete = async () => {
     try {
-      const response = await axios.delete('http://localhost:8000/news/delete');
+      const response = await axios.delete(`${API_URL}/news/delete`);
       setMessage(response.data.message);
       fetchBreakingNews(); // Fetch updated news after deletion
     } catch (error) {
