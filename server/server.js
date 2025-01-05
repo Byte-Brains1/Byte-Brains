@@ -10,7 +10,7 @@ const contactRouter = require('./contact'); // Import the Breaking News router
 
 require('dotenv').config();
 // const PORT = process.env.PORT;
-const MONGODB_URL = process.env.MONGODB_URL || 8000;
+const MONGODB_URL = process.env.MONGODB_URL;
 
 
 
@@ -45,8 +45,8 @@ app.use('/contacts', contactRouter);
 app.get('/',(req,res)=>{
   res.send("server is running");
 })
-const PORT = process.env.SERVER_PORT;
-// const PORT = 8000;
+// const PORT = process.env.SERVER_PORT;
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   // res.send("This server");
