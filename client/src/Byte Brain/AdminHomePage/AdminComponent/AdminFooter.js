@@ -45,12 +45,12 @@ const AdminFooter = () => {
     e.preventDefault();
     try {
       if (isEditing) {
-        await axios.put(`http://localhost:8000/contacts/update/${editingId}`, formData);
+        await axios.put(`${API_URL}/contacts/update/${editingId}`, formData);
         setIsEditing(false);
         setEditingId(null);
         alert('Contact updated successfully!');
       } else {
-        await axios.post('http://localhost:8000/contacts/upload', formData);  // Fixed POST request URL
+        await axios.post(`$API_URL}/contacts/upload`, formData);  // Fixed POST request URL
         alert('Contact created successfully!');
       }
       setFormData({
@@ -85,7 +85,7 @@ const AdminFooter = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/contacts/delete/${id}`);
+      await axios.delete(`${API_URL}/contacts/delete/${id}`);
       alert('Contact deleted successfully!');
       fetchContacts();
     } catch (error) {
