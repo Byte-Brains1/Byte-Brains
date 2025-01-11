@@ -5,7 +5,7 @@ const eventsRouter = require('./Events');
 const teammatesRouter = require('./Teammates');
 const imageRouter = require('./Image'); // Import the Image  
 const breakingNewsRouter = require('./BreakingNews'); // Import the Breaking News router
-const contactRouter = require('./contact'); // Import the Breaking News router
+// const contactRouter = require('./contact'); // Import the Breaking News router
 // const config = require('./config');
 
 require('dotenv').config();
@@ -38,7 +38,7 @@ app.use('/events', eventsRouter);
 app.use('/teammates', teammatesRouter);
 app.use('/images', imageRouter); // Add the image routes
 app.use('/news', breakingNewsRouter);
-app.use('/contacts', contactRouter);
+// app.use('/contacts', contactRouter);
 
 // Start the server
 
