@@ -1,62 +1,127 @@
-/* Footer styles */
+/* General styles for the footer */
 .footer {
-    background-color: #000;
+    background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
-  }
-  
-  .footer-content {
+    font-family: Arial, sans-serif;
+}
+
+.footer-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.social-links {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .contact-info {
-    margin-bottom: 15px;
-  }
-  
-  .contact-info h2 {
-    color: white;
-    margin: 0;
-  }
-  
-  .contact-info p {
-    color: #ccc;
-    margin: 5px 0;
-  }
-  
-  .contact-info strong {
-    color: white;
-  }
-  
-  /* Footer logo and copyright text */
-  .footer-logo {
-    margin-top: 20px;
-  }
-  
-  .footer-logo img {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Social icon styles */
+.social-icon {
+    display: inline-block;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+/* Slide-in animation for social icons */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Fade-in for social links container */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation delay for each icon to make them slide in one by one */
+.social-icon:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.social-icon:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.social-icon:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+/* Hover effect for social icons */
+.social-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Social logo styles */
+.social-logo {
     width: 50px;
     height: 50px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-logo p {
-    color: white;
-    margin: 0;
-    font-size: 14px;
-  }
-  
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    .footer-content {
-      padding: 10px;
+    object-fit: contain;
+}
+
+/* Media Queries for responsiveness */
+
+/* For devices larger than 768px */
+@media (min-width: 768px) {
+    .footer-container h2 {
+        font-size: 2.5rem;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .footer-content {
-      padding: 5px;
+
+    .social-logo {
+        width: 60px;
+        height: 60px;
     }
-  }
-  
+
+    .social-links {
+        gap: 30px;
+    }
+}
+
+/* For devices between 576px and 768px */
+@media (min-width: 576px) and (max-width: 767px) {
+    .footer-container h2 {
+        font-size: 2rem;
+    }
+
+    .social-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-links {
+        gap: 20px;
+    }
+}
+
+/* For small devices (less than 576px) */
+@media (max-width: 575px) {
+    .footer-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .social-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+}
