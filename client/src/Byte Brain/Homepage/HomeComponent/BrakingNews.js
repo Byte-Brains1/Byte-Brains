@@ -16,7 +16,7 @@ function BreakingNews() {
         setNews(response.data.text); // Assuming the text is in 'text' field in response
       } catch (error) {
         console.error('Error fetching breaking news:', error);
-        setError('Error fetching breaking news');
+        setError('Error fetching');
       }
     }
 
@@ -31,7 +31,7 @@ function BreakingNews() {
       ) : (
         <div className="news-marquee">
           <marquee style={{ fontSize: '20px', fontWeight: 'bold' }}>
-            {news ? news : 'Loading breaking news...'}
+            {news ? news : 'Loading...'}
           </marquee>
         </div>
       )}
