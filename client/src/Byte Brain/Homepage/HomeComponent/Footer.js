@@ -1,58 +1,26 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import "./Footer.css"; // Importing footer-specific styles
+// ContactUsFooter.jsx
+import React from 'react';
+import './Footer.css'; // Import the CSS file for styling
 
-function Footer() {
-  const [contacts, setContacts] = useState([]);
-
-  const API_URL = process.env.REACT_APP_API_URL;
-
-
-  useEffect(() => {
-    axios
-      .get(`${API_URL}/contacts/home`) // Your backend endpoint
-      .then((response) => {
-        setContacts(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching contacts:", error);
-      });
-  }, []);
-
-  return (
-    <footer className="footer">
-      <div className="footer-content">
-        {contacts.length > 0 ? (
-          contacts.map((contact) => (
-            <div className="contact-info" key={contact._id}>
-              <h2>{contact.name}</h2>
-              <p>
-                <strong>Phone:</strong> {contact.phoneNumber1}{" "}
-                {contact.phoneNumber2 && `/ ${contact.phoneNumber2}`}
-              </p>
-              <p>
-                <strong>Email:</strong> {contact.email1}{" "}
-                {contact.email2 && `/ ${contact.email2}`}
-              </p>
-              <p>
-                <strong>Instagram:</strong> {contact.instagram}
-              </p>
-              <p>
-                <strong>LinkedIn:</strong> {contact.linkedin}
-              </p>
+const Footer = () => {
+    return (
+        <footer className="footer">
+            <div className="footer-container">
+                <h2>Contact Us</h2>
+                <div className="social-links">
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                        <img src="./logo/Instagram.png" alt="Instagram" className="social-logo" />
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                        <img src="./logo/Linkedin.png" alt="LinkedIn" className="social-logo" />
+                    </a>
+                    <a href="mailto:bytebrains@gmail.com" target="_blank" className="social-icon" rel="noopener noreferrer">
+                        <img src="./logo/gmail.png" alt="Gmail" className="social-logo" />
+                    </a>
+                </div>
             </div>
-          ))
-        ) : (
-          <p>No contact information available.</p>
-        )}
-      </div>
-
-      <div className="footer-logo">
-        <img src="logo.png" alt="Logo" />
-        <p>&copy; 2024 Contact App. All rights reserved.</p>
-      </div>
-    </footer>
-  );
-}
+        </footer>
+    );
+};
 
 export default Footer;
