@@ -24,7 +24,7 @@ const EventCard = ({ event, isPastDate, onShowSubEvents }) => {
           ) : (
             <span className="locked-link">Event Completed</span>
           )}
-          <button onClick={() => onShowSubEvents(event)}>Show SubEvents</button>
+          <button onClick={() => onShowSubEvents(event)}>Event Details</button>
         </div>
       </div>
     </div>
