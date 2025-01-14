@@ -11,7 +11,7 @@ const Footer = () => {
                     <a href="https://www.instagram.com/byte_brains_club/profilecard/?igsh=MTkzdGt5amM3ajh5aw== " target="_blank" rel="noopener noreferrer" className="social-icon">
                         <img src="./logo/Instagram.png" alt="Instagram" className="social-logo" />
                     </a>
-                    <a href="mailto:bytebrains@gmail.com" className="social-icon">
+                    <a href="mailto:bytebrainsclub@gmail.com" className="social-icon">
                         <img src="./logo/gmail.png" alt="Gmail" className="social-logo" />
                     </a>
                 </div>
