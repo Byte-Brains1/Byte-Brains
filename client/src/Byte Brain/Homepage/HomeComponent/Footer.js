@@ -15,7 +15,7 @@ const Footer = () => {
                         <img src="./logo/gmail.png" alt="Gmail" className="social-logo" />
                     </a>
                 </div>
-        <p>@bytebrains</p>
+        <p className="byte">@bytebrains</p>
             </div>
         </footer>
     );
