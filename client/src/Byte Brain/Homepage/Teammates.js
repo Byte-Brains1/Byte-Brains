@@ -37,7 +37,11 @@ const Teammates = () => {
     </div>
     <div className="teammate-list">
       {loading ? ( 
-        <p>Loading...</p>
+        // <p>Loading...</p>
+        <div className="loader-container">
+           <div className="loader"></div>
+        </div>
+
       ) : error ? (
         <p className="error-message">{error}</p>
       ) : teammates.length > 0 ? (
