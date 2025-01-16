@@ -30,7 +30,7 @@ const SubEventModal = ({ event, onClose, isPastDate }) => {
         </div>
         <div className="modal-footer">
           <button className="close-modal-button" onClick={onClose}>
-            Close Popup
+            Close
           </button>
         </div>
       </div>
