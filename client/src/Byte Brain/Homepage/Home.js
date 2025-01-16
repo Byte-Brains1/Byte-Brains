@@ -61,7 +61,10 @@ const Home = () => {
         <h1>Events</h1>
         <div className="event-list">
           {loading ? (
-            <p>Loading events...</p>
+            // <p>Loading events...</p>
+            <div className="loader-container">
+               <div className="loader"></div>
+            </div>
           ) : error ? (
             <p className="error-message">{error}</p>
           ) : events.length > 0 ? (
